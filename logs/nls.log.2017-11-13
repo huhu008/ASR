@@ -1,0 +1,3 @@
+2017 十一月 13 19:40:07,294 -  INFO [main] (NlsClient.java:107) - use url: wss://nls.dataapi.aliyun.com:443
+2017 十一月 13 19:40:07,694 -  INFO [New I/O worker #1] (NlsSession.java:191) - End Handshake at:1510573207694, Handshake latency is: 385
+2017 十一月 13 19:40:08,565 -  INFO [New I/O worker #1] (NlsClientHandler.java:91) - receive colse frame

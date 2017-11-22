@@ -1,0 +1,15 @@
+2017 十一月 18 12:23:47,351 -  INFO [main] (NlsClient.java:107) - use url: wss://nls.dataapi.aliyun.com:443
+2017 十一月 18 12:23:47,874 -  INFO [New I/O worker #1] (NlsSession.java:191) - End Handshake at:1510979027874, Handshake latency is: 501
+2017 十一月 18 12:23:48,690 -  INFO [New I/O worker #1] (NlsClientHandler.java:91) - receive colse frame
+2017 11月 21 12:37:12,316 -  INFO [main] (NlsClient.java:107) - use url: wss://nls.dataapi.aliyun.com:443
+2017 11月 21 12:37:14,132 -  INFO [New I/O worker #1] (NlsSession.java:191) - End Handshake at:1511239034132, Handshake latency is: 1585
+2017 11月 21 12:37:14,960 -  INFO [New I/O worker #1] (NlsClientHandler.java:91) - receive colse frame
+2017 11月 21 12:56:25,320 -  INFO [main] (NlsClient.java:107) - use url: wss://nls.dataapi.aliyun.com:443
+2017 11月 21 12:56:25,844 -  INFO [New I/O worker #1] (NlsSession.java:191) - End Handshake at:1511240185844, Handshake latency is: 508
+2017 11月 21 12:56:26,656 -  INFO [New I/O worker #1] (NlsClientHandler.java:91) - receive colse frame
+2017 11月 21 12:56:32,215 -  INFO [main] (NlsClient.java:107) - use url: wss://nls.dataapi.aliyun.com:443
+2017 11月 21 12:56:32,731 -  INFO [New I/O worker #1] (NlsSession.java:191) - End Handshake at:1511240192731, Handshake latency is: 500
+2017 11月 21 12:56:33,648 -  INFO [New I/O worker #1] (NlsClientHandler.java:91) - receive colse frame
+2017 11月 21 12:57:53,253 -  INFO [main] (NlsClient.java:107) - use url: wss://nls.dataapi.aliyun.com:443
+2017 11月 21 12:57:53,816 -  INFO [New I/O worker #1] (NlsSession.java:191) - End Handshake at:1511240273816, Handshake latency is: 547
+2017 11月 21 12:57:54,684 -  INFO [New I/O worker #1] (NlsClientHandler.java:91) - receive colse frame
