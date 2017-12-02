@@ -14,6 +14,7 @@ import java.util.Map;
 
 @Controller
 public class YuZhi_decodeRecall {
+    private long time;
     @RequestMapping(value = "/getJson", method = RequestMethod.POST)
     public @ResponseBody
     String  getJson(HttpServletRequest request) throws IOException {
@@ -39,7 +40,10 @@ public class YuZhi_decodeRecall {
             System.out.println(jsonObject.getString("decode_result"));
             File file =new File("C:\\Users\\yzkj\\Desktop\\Decode.txt");
             BufferedWriter bw=new BufferedWriter(new FileWriter(file));
-            bw.write(content);
+            bw.write(jsonObject.getString("decode_result"));
+            long bt = Integer.parseInt(jsonObject.getString("recv_time"));
+            long et = Integer.parseInt(jsonObject.getString("decode_time"));
+            time = (et-bt)/1000;
             bw.flush();
             bw.close();
             return "ok";
@@ -64,6 +68,10 @@ public class YuZhi_decodeRecall {
             ip = request.getRemoteAddr();
         }
         return ip.equals("0:0:0:0:0:0:0:1") ? "127.0.0.1" : ip +"    hello world";
+    }
+
+    public long getTime() {
+        return time;
     }
 }
 

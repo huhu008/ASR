@@ -24,6 +24,8 @@ public class Go {
     private XunFei xunFei;
     @Autowired
     private BaiDu baiDu;
+    @Autowired
+    private YuZhi_decodeRecall yuzhi;
 
     private String filename;
     private String yaeresult;
@@ -79,15 +81,19 @@ public class Go {
         JSONObject json_engine_three = new JSONObject();
         JSONObject json_engine_four = new JSONObject();
         json_engine_one.put("engine", "ali");
+        json_engine_one.put("time",ALi.getTime());
         json_engine_one.put("sentence", ALi.getResult());
         System.out.println(ALi.getResult()+"                 ali");
         json_engine_two.put("engine", "xunfei");
+        json_engine_two.put("time",xunFei.getTime());
         json_engine_two.put("sentence", xunFei.getResult());
         System.out.println(xunFei.getResult()+"               xunfei");
         json_engine_three.put("engine","yuzhi");
+        json_engine_three.put("time",yuzhi.getTime());
         json_engine_three.put("sentence",yaeresult);
         System.out.println(yaeresult+"                  yuzhi");
         json_engine_four.put("engine","baidu");
+        json_engine_four.put("time",baiDu.getTime());
         json_engine_four.put("sentence",baiDu.getResult1());
         System.out.println(baiDu.getResult1()+"               baidu");
         JSONArray array = new JSONArray();

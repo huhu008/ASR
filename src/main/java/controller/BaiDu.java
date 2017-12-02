@@ -25,6 +25,9 @@ public class BaiDu {
     private String result1=" ";
     private String result2;
     private JSONArray array;
+    private long btime;
+    private long et;
+    private long time;
 
     public static void main(String[] args) throws Exception {
         File pcmFile = new File("C:\\Users\\yzkj\\Desktop\\test\\50.wav");
@@ -35,6 +38,7 @@ public class BaiDu {
     }
 
     public void getToken(File file) throws Exception {
+        btime = System.currentTimeMillis();
         String getTokenURL = "https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials" +
                 "&client_id=" + apiKey + "&client_secret=" + secretKey;
         HttpURLConnection conn = (HttpURLConnection) new URL(getTokenURL).openConnection();
@@ -88,6 +92,8 @@ public class BaiDu {
             }
             result1=new String(b,"utf-8");
             result1=result1.substring(0,result1.length()-1);
+            et = System.currentTimeMillis();
+            time = et-btime;
         }
         catch (Exception e){
             result1 = "音频质量过差";
@@ -178,6 +184,10 @@ public class BaiDu {
     }
     public String getResult1(){
         return result1;
+    }
+
+    public long getTime() {
+        return time;
     }
 
     private String getUtf8String(String s) throws UnsupportedEncodingException

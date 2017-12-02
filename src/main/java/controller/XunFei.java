@@ -13,6 +13,9 @@ public class XunFei {
 	private int perWaitTime = 100;
 	private int maxQueueTimes = 3;
 	private String result = "";
+	private long bt;
+	private long et;
+	private long time;
 	public String  error1;
 	static {
 		Setting.setShowLog(false);
@@ -20,7 +23,7 @@ public class XunFei {
 	}
 	public void RecognizePcmfileByte(InputStream fis) throws InterruptedException {
 //		FileInputStream fis = null;
-
+		bt = System.currentTimeMillis();
         SpeechRecognizer.createRecognizer();
 		byte[] voiceBuffer = null;
 		try {
@@ -80,6 +83,8 @@ public class XunFei {
 				maxWaitTime -= perWaitTime;
 			}
 		}
+		et = System.currentTimeMillis();
+		time= et -bt;
 		result = mResult.toString();
 	}
 
@@ -139,6 +144,10 @@ public class XunFei {
 
 	public String getResult() {
 		return result;
+	}
+
+	public long getTime() {
+		return time;
 	}
 
 	public static void main(String[] args) throws InterruptedException, FileNotFoundException {

@@ -21,6 +21,9 @@ public class ALi implements NlsListener {
 
 	private static NlsClient client = new NlsClient();
 	private String result="";
+	private long bt;
+	private long et;
+	private long time;
 	public ALi() {
 		System.out.println("init Nls client...");
 		// 初始化NlsClient
@@ -34,6 +37,7 @@ public class ALi implements NlsListener {
 	}
 	public void startAsr(InputStream fis) throws IOException, InterruptedException {
 		//开始发送语音
+		bt = System.currentTimeMillis();
 			System.out.println("open audio file...");
 			try {
 			} catch (Exception e) {
@@ -80,6 +84,8 @@ public class ALi implements NlsListener {
 		} else {
 			System.out.println(result);
 		}
+		et = System.currentTimeMillis();
+		time = et- bt;
 	}
 //	@Override
 	public void onOperationFailed(NlsEvent e) {
@@ -96,6 +102,9 @@ public class ALi implements NlsListener {
 	public String getResult(){
 		JSONObject jsonObject = JSONObject.parseObject(result);
 		return jsonObject.getString("result");
+	}
+	public long getTime(){
+		return time;
 	}
 	public static void main(String[] args) throws IOException, InterruptedException {
 		ALi asrXfkj = new ALi();
