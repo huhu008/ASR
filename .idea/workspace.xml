@@ -7,7 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a117b4f3-073f-4242-8f08-37a14add4e4e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ALi.class" afterPath="$PROJECT_DIR$/target/classes/controller/ALi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/BaiDu.class" afterPath="$PROJECT_DIR$/target/classes/controller/BaiDu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/Go.class" afterPath="$PROJECT_DIR$/target/classes/controller/Go.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/XunFei.class" afterPath="$PROJECT_DIR$/target/classes/controller/XunFei.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/YuZhi_decodeRecall.class" afterPath="$PROJECT_DIR$/target/classes/controller/YuZhi_decodeRecall.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/xf$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/xf$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/xf.class" afterPath="$PROJECT_DIR$/target/classes/controller/xf.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy.war" afterPath="$PROJECT_DIR$/target/yy.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/ALi.class" afterPath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/ALi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/BaiDu.class" afterPath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/BaiDu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/Go.class" afterPath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/Go.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/XunFei.class" afterPath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/XunFei.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/YuZhi_decodeRecall.class" afterPath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/YuZhi_decodeRecall.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/xf$1.class" afterPath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/xf$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/xf.class" afterPath="$PROJECT_DIR$/target/yy/WEB-INF/classes/controller/xf.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/Go.java" afterPath="$PROJECT_DIR$/src/main/java/controller/Go.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/YuZhi_decodeRecall.java" afterPath="$PROJECT_DIR$/src/main/java/controller/YuZhi_decodeRecall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/yy/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/yy/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,12 +56,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Go.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Go.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/Go.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            <state relative-caret-position="174">
+              <caret line="88" column="61" lean-forward="false" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YuZhi_decodeRecall.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/YuZhi_decodeRecall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +91,7 @@
       <file leaf-file-name="xf.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/xf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2760">
+            <state relative-caret-position="3020">
               <caret line="151" column="25" lean-forward="false" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
               <folding>
                 <element signature="e#0#6035#0" expanded="true" />
@@ -147,13 +179,13 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/xf.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/YuZhi_audioRecall.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/YuZhi_decodeRecall.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/XunFei.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Sample.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/Go.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/BaiDu.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ALi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/Go.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/YuZhi_decodeRecall.java" />
       </list>
     </option>
   </component>
@@ -183,7 +215,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-6" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
@@ -226,7 +258,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,19 +265,46 @@
               <item name="ASR" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASR" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ASR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASR" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASR" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASR" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASR" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15936255" />
     <property name="project.structure.side.proportion" value="0.42263278" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
@@ -274,6 +332,7 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.8">
     <configuration name="8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ASR:war">
@@ -637,15 +696,17 @@
       <workItem from="1511328710090" duration="2572000" />
       <workItem from="1511338669383" duration="373000" />
       <workItem from="1511339135598" duration="3063000" />
-      <workItem from="1511517062291" duration="91000" />
+      <workItem from="1511517062291" duration="1400000" />
+      <workItem from="1511852236270" duration="3154000" />
+      <workItem from="1512181100077" duration="8493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124700000" />
+    <option name="totallyTimeSpent" value="137656000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-6" y="0" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -665,11 +726,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.509061" sideWeight="0.8140556" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49588138" sideWeight="0.8140556" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22405271" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1785174" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -987,18 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/xf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="151" column="25" lean-forward="false" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#6035#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <marker date="1510565643841" expanded="true" signature="1261:1300" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/yzkj/xunfeiasr/2.0/xunfeiasr-2.0.jar!/com/iflytek/cloud/speech/RecognizerResult.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1010,13 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/YuZhi_decodeRecall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1054,11 +1096,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/xf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3020">
+          <caret line="151" column="25" lean-forward="false" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#6035#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <marker date="1510565643841" expanded="true" signature="1261:1300" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/Go.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="174">
+          <caret line="88" column="61" lean-forward="false" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/YuZhi_decodeRecall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1115,7 +1179,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1140,7 +1204,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>json-jena-1.0</last-edited>
+          <last-edited>Maven: net.sf.json-lib:json-lib:2.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -8,39 +8,46 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
 public class YuZhi_decodeRecall {
     @RequestMapping(value = "/getJson", method = RequestMethod.POST)
     public @ResponseBody
     String  getJson(HttpServletRequest request) throws IOException {
-//        System.out.println("JSON");
-//        this.uuid = uuid;
-//        this.ID = ID;
-//        this.Decode = Decode;
-//        File file = new File("C:\\Users\\59785\\Desktop\\json.txt");
-//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
-//        bufferedWriter.write(uuid + ID + Decode + "\r\n");
-//        bufferedWriter.flush();
-//        bufferedWriter.close();
+
+        System.out.println("decode");
         BufferedReader reader = request.getReader();
-        char[] buf = new char[512];
-        int len = 0;
-        StringBuffer contentBuffer = new StringBuffer();
-        while ((len = reader.read(buf)) != -1) {
-            contentBuffer.append(buf, 0, len);
+        String string,content = "";
+        while ((string = reader.readLine())!= null){
+            content += string;
         }
-        String content = contentBuffer.toString();
-        if(content == null){
-            content = "";
-        }
+//        Map<String, String> map = new HashMap<String, String>();
+//        Enumeration headerNames = request.getHeaderNames();
+//        while (headerNames.hasMoreElements()) {
+//            String key = (String) headerNames.nextElement();
+//            String value = request.getHeader(key);
+//            map.put(key, value);
+//        }
+//        System.out.println(map);
+//        System.out.println(map.get("decode_result"));
         JSONObject jsonObject =JSONObject.parseObject(content);
-        System.out.println(jsonObject.getString("Decode"));
-        File file =new File("C:\\Users\\59785\\Desktop\\Decode.txt");
-        BufferedWriter bw=new BufferedWriter(new FileWriter(file));
-        bw.write(jsonObject.getString("Decode"));
-        bw.flush();
-        bw.close();
-        return "ok";
+        System.out.println(jsonObject);
+        if(Integer.parseInt(jsonObject.getString("return_code"))==0){
+            System.out.println(jsonObject.getString("decode_result"));
+            File file =new File("C:\\Users\\yzkj\\Desktop\\Decode.txt");
+            BufferedWriter bw=new BufferedWriter(new FileWriter(file));
+            bw.write(content);
+            bw.flush();
+            bw.close();
+            return "ok";
+        }
+        else {
+            System.out.println("error");
+        }
+        return "noting";
     }
 
     @RequestMapping(value = "/get", method = RequestMethod.GET)

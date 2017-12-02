@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.xml.ws.Response;
 import java.io.*;
+import java.nio.Buffer;
 import java.util.Arrays;
 
 @Controller
@@ -25,6 +26,7 @@ public class Go {
     private BaiDu baiDu;
 
     private String filename;
+    private String yaeresult;
 
     @RequestMapping(value = "/file", method = RequestMethod.POST)
     public void fileUpload2(@RequestParam(value = "file") MultipartFile file) throws Exception {
@@ -54,6 +56,11 @@ public class Go {
             ALi.startAsr(fisALi);
             fisALi.close();
             System.out.println("```````````````````````````````````````````````````````");
+
+            File file1 = new File("C:\\Users\\yzkj\\Desktop\\Decode.txt");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file1));
+            yaeresult = bufferedReader.readLine();
+            bufferedReader.close();
         }
         catch (Exception e){
             e.printStackTrace();
@@ -69,7 +76,7 @@ public class Go {
         JSONObject json = new JSONObject();
         JSONObject json_engine_one = new JSONObject();
         JSONObject json_engine_two = new JSONObject();
-//        JSONObject json_engine_three = new JSONObject();
+        JSONObject json_engine_three = new JSONObject();
         JSONObject json_engine_four = new JSONObject();
         json_engine_one.put("engine", "ali");
         json_engine_one.put("sentence", ALi.getResult());
@@ -77,15 +84,16 @@ public class Go {
         json_engine_two.put("engine", "xunfei");
         json_engine_two.put("sentence", xunFei.getResult());
         System.out.println(xunFei.getResult()+"               xunfei");
-//        json_engine_three.put("engine","yuzhi");
-//        json_engine_three.put("sentence",yaeresult);
+        json_engine_three.put("engine","yuzhi");
+        json_engine_three.put("sentence",yaeresult);
+        System.out.println(yaeresult+"                  yuzhi");
         json_engine_four.put("engine","baidu");
         json_engine_four.put("sentence",baiDu.getResult1());
         System.out.println(baiDu.getResult1()+"               baidu");
         JSONArray array = new JSONArray();
         array.add(json_engine_one);
         array.add(json_engine_two);
-//        array.add(json_engine_three);
+        array.add(json_engine_three);
         array.add(json_engine_four);
         json.put("result", array);
         json.put("filename", filename.substring(0, filename.length() - 4));
