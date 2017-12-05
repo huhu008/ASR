@@ -37,13 +37,15 @@ public class YuZhi_decodeRecall {
         JSONObject jsonObject =JSONObject.parseObject(content);
         System.out.println(jsonObject);
         if(Integer.parseInt(jsonObject.getString("return_code"))==0){
+            String recv = jsonObject.getString("recv_time");
+            String decode = jsonObject.getString("decode_time");
+            long bt = Integer.parseInt(recv.substring(recv.length()-7,recv.length()));
+            long et = Integer.parseInt(decode.substring(decode.length()-7,decode.length()));
+            time = (et-bt)/1000;
             System.out.println(jsonObject.getString("decode_result"));
-            File file =new File("C:\\Users\\yzkj\\Desktop\\Decode.txt");
+            File file =new File("C:\\Users\\59785\\Desktop\\Decode.txt");
             BufferedWriter bw=new BufferedWriter(new FileWriter(file));
             bw.write(jsonObject.getString("decode_result"));
-            long bt = Integer.parseInt(jsonObject.getString("recv_time"));
-            long et = Integer.parseInt(jsonObject.getString("decode_time"));
-            time = (et-bt)/1000;
             bw.flush();
             bw.close();
             return "ok";

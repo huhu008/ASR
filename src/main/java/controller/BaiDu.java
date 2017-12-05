@@ -1,16 +1,11 @@
 package controller;
 
-
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Component;
-
 import javax.xml.bind.DatatypeConverter;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 
 
 
@@ -23,8 +18,6 @@ public class BaiDu {
     private static final String secretKey = "ab26f77fe85788ccd92707b1c0f5a71d";
     private static final String cuid = "54-04-A6-77-E0-84";
     private String result1=" ";
-    private String result2;
-    private JSONArray array;
     private long btime;
     private long et;
     private long time;
@@ -34,7 +27,6 @@ public class BaiDu {
         BaiDu baiDu = new BaiDu();
         baiDu.getToken(pcmFile);
         System.out.println(baiDu.getResult1());
-//        System.out.println(baiDu.getResult2());
     }
 
     public void getToken(File file) throws Exception {
@@ -78,14 +70,8 @@ public class BaiDu {
         JSONObject jsonObject=new JSONObject(printResponse(conn));
         try{
             result1=jsonObject.getJSONArray("result").getString(0);
-            byte bt[] = result1.getBytes();
-            OutputStream os = new FileOutputStream("C:\\Users\\yzkj\\Desktop\\1.txt");
-            os.write(bt);
-            os.close();
-            System.out.println(result1);
             byte b[]=result1.getBytes();
             for(int i=0;i<b.length;i++){
-                System.out.println(b[i]);
                 if(b[i]==63){
                     b[i]=-128;
                 }
@@ -94,27 +80,12 @@ public class BaiDu {
             result1=result1.substring(0,result1.length()-1);
             et = System.currentTimeMillis();
             time = et-btime;
+            System.out.println(result1);
         }
         catch (Exception e){
             result1 = "音频质量过差";
             e.printStackTrace();
         }
-//        InputStream fis3= new FileInputStream(file1);
-//        ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
-//        byte[] b =new byte[1];
-//        int n;
-//        while ((n=fis3.read(b))!=-1)
-//        {
-//            byteArrayOutputStream.write(b,0,n);
-//        }
-//        byte[] buffer = byteArrayOutputStream.toByteArray();
-//        for(int i=0;i<buffer.length;i++){
-//            System.out.print(Byte.toString(buffer[i]) +" ");
-//            if(i%50==0){
-//                System.out.println();
-//            }
-//        }
-
     }
 
     public void method2(File file,String filetype) throws Exception {
@@ -134,7 +105,6 @@ public class BaiDu {
 
         System.out.println("-------------------");
         System.out.println(printResponse(conn));
-
         System.out.println("-------------------");
 
         String result = printResponse(conn);
@@ -190,15 +160,4 @@ public class BaiDu {
         return time;
     }
 
-    private String getUtf8String(String s) throws UnsupportedEncodingException
-    {
-        StringBuffer sb = new StringBuffer();
-        sb.append(s);
-        String xmlString = "";
-        String xmlUtf8 = "";
-        xmlString = new String(sb.toString().getBytes("GBK"));
-        xmlUtf8 = URLEncoder.encode(xmlString , "GBK");
-
-        return URLDecoder.decode(xmlUtf8, "UTF-8");
-    }
 }
