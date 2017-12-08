@@ -25,16 +25,13 @@ public class Go {
     private XunFei xunFei;
     @Autowired
     private BaiDu baiDu;
-    @Autowired
-    private YuZhi_decodeRecall yuzhi;
 
     private String filename;
-    private String yaeresult;
 
     @RequestMapping(value = "/file", method = RequestMethod.POST)
     public void fileUpload2(@RequestParam(value = "file") MultipartFile file,
                             @RequestParam(value = "engine",required = false) String engine,
-                            HttpServletRequest servletRequest) throws Exception {
+                            HttpServletRequest httpServletRequest) throws Exception {
         filename = file.getOriginalFilename();
         if(engine == null){
             engine = "A,X,Y,B";
@@ -67,20 +64,20 @@ public class Go {
             baiDu.getToken(fileBaidu);
             System.out.println("````````````````````````````````````````````````````````");
         }
-        if(engine.contains("X")||engine.contains("X")) {
+        if(engine.contains("X")||engine.contains("x")) {
             System.out.println("xunfei");
             InputStream fisXunFei = file.getInputStream();
             xunFei.RecognizePcmfileByte(fisXunFei);
             fisXunFei.close();
             System.out.println("```````````````````````````````````````````````````````");
         }
-        if(engine.contains("Y")||engine.contains("y")){
-            System.out.println("yuzhi");
-            File file1 = new File("C:\\Users\\59785\\Desktop\\Decode.txt");
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(file1));
-            yaeresult = bufferedReader.readLine();
-            bufferedReader.close();
-        }
+//        if(engine.contains("Y")||engine.contains("y")){
+//            System.out.println("yuzhi");
+//            File file1 = new File("C:\\Users\\59785\\Desktop\\Decode.txt");
+//            BufferedReader bufferedReader = new BufferedReader(new FileReader(file1));
+//            yaeresult = bufferedReader.readLine();
+//            bufferedReader.close();
+//        }
     }
 
     @RequestMapping(value = "/file", method = RequestMethod.GET)
@@ -114,13 +111,13 @@ public class Go {
             array.add(json_engine_two);
 
         }
-        if(engine.contains("Y")||engine.contains("y")) {
-            json_engine_three.put("engine","yuzhi");
-            json_engine_three.put("time",yuzhi.getTime());
-            json_engine_three.put("sentence",yaeresult);
-            System.out.println(yaeresult+"                  yuzhi");
-            array.add(json_engine_three);
-        }
+//        if(engine.contains("Y")||engine.contains("y")) {
+//            json_engine_three.put("engine","yuzhi");
+//            json_engine_three.put("time",yuzhi.getTime());
+//            json_engine_three.put("sentence",yaeresult);
+//            System.out.println(yaeresult+"                  yuzhi");
+//            array.add(json_engine_three);
+//        }
         if(engine.contains("B")||engine.contains("b")) {
             json_engine_four.put("engine","baidu");
             json_engine_four.put("time",baiDu.getTime());

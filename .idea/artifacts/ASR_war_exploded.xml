@@ -39,6 +39,7 @@
           <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2.2" />
           <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: io.netty:netty-all:4.1.6.Final" />
         </element>
       </element>
       <element id="directory" name="META-INF">

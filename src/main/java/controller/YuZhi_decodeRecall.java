@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
+@Deprecated
 public class YuZhi_decodeRecall {
     private long time;
     @RequestMapping(value = "/getJson", method = RequestMethod.POST)

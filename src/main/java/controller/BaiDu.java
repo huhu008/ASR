@@ -23,10 +23,12 @@ public class BaiDu {
     private long time;
 
     public static void main(String[] args) throws Exception {
-        File pcmFile = new File("C:\\Users\\yzkj\\Desktop\\test\\50.wav");
-        BaiDu baiDu = new BaiDu();
-        baiDu.getToken(pcmFile);
-        System.out.println(baiDu.getResult1());
+        FileWriter file =new FileWriter("result.txt");
+        BufferedWriter bw = new BufferedWriter(file);
+        bw.write("ni hao a ni hao a ");
+        bw.flush();
+        bw.close();
+
     }
 
     public void getToken(File file) throws Exception {
@@ -38,7 +40,6 @@ public class BaiDu {
         String filetype=file.getAbsolutePath().substring(file.getAbsolutePath().length()-3);
         System.out.println(filetype);
         method1(file,filetype);
-//        method2(file,filetype);
     }
 
     public void method1(File file,String filetype) throws Exception {
@@ -86,31 +87,6 @@ public class BaiDu {
             result1 = "音频质量过差";
             e.printStackTrace();
         }
-    }
-
-    public void method2(File file,String filetype) throws Exception {
-        HttpURLConnection conn = (HttpURLConnection) new URL(serverURL
-                + "?cuid=" + cuid + "&token=" + token).openConnection();
-        conn.setRequestMethod("POST");
-        conn.setRequestProperty("Content-Type", "audio/"+filetype+"; rate=16000");
-
-        conn.setDoInput(true);
-        conn.setDoOutput(true);
-
-        // send request
-        DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
-        wr.write(loadFile(file));
-        wr.flush();
-        wr.close();
-
-        System.out.println("-------------------");
-        System.out.println(printResponse(conn));
-        System.out.println("-------------------");
-
-        String result = printResponse(conn);
-//        JSONObject jsonObject=new JSONObject(printResponse(conn));
-
-
     }
 
     public String printResponse(HttpURLConnection conn) throws Exception {
