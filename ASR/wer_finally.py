@@ -45,7 +45,7 @@ def asr_dir(asr_type):
             for each_engine in recognization.get("result"):
                 fout.write("%s:  %s  worldError: %d\n" % (each_engine.get("engine"), each_engine.get("sentence"), each_engine.get("worldError")))
             recognization_list.append(recognization)
-            if count % 10 == 0:
+            if count % 20 == 0:
                 asrResult = worldErrorRate(recognization_list)
                 for key, value in asrResult.items():
                     fout.write("%s   %s \n" % (key, value))
@@ -78,7 +78,7 @@ def asr_wavlist(asr_type):
             each_engine.update(dict([("worldError", worldError), ("worldSum", len(sentence))]))
             recognization["result"].append(each_engine)
         if "y" in sys.argv[3] or "Y" in sys.argv[3] or sys.argv[3] == "all":
-            recognization_yuzhi = asr_yuzhi(filename).ger("result")
+            recognization_yuzhi = asr_yuzhi(filename)
             sentence = recognization_yuzhi.get("sentence")
             sentence = re.sub(str("[\.\!\/_,$%^*(+?\"\']+|[+——！，。？、~@#￥%……&*（）]+"), str(""), str(str(sentence)))
             worldError = wer(result, sentence)
@@ -87,7 +87,7 @@ def asr_wavlist(asr_type):
         for each_engine in recognization.get("result"):
             fout.write("%s:  %s  worldError: %d\n" % (each_engine.get("engine"), each_engine.get("sentence"), each_engine.get("worldError")))
         recognization_list.append(recognization)
-        if count % 10 == 0:
+        if count % 20 == 0:
             asrResult = worldErrorRate(recognization_list)
             for key, value in asrResult.items():
                 fout.write("%s   %s \n" % (key, value))
