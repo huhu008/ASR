@@ -84,7 +84,7 @@ public class BaiDu {
             System.out.println(result1);
         }
         catch (Exception e){
-            result1 = "音频质量过差";
+            result1 = "未识别";
             e.printStackTrace();
         }
     }

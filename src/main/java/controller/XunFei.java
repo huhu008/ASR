@@ -12,7 +12,7 @@ public class XunFei {
 	private int maxWaitTime = 5000;
 	private int perWaitTime = 100;
 	private int maxQueueTimes = 3;
-	private String result = "";
+	private String result= "未识别";
 	private long bt;
 	private long et;
 	private long time;
@@ -143,6 +143,10 @@ public class XunFei {
 	};
 
 	public String getResult() {
+		if("".equals(result) || "\n".equals(result)){
+			result = "未识别";
+		}
+		System.out.println(result);
 		return result;
 	}
 

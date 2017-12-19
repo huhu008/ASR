@@ -20,7 +20,7 @@ public class ALi implements NlsListener {
 
 
 	private static NlsClient client = new NlsClient();
-	private String result="";
+	private String result;
 	private long bt;
 	private long et;
 	private long time;
@@ -101,6 +101,9 @@ public class ALi implements NlsListener {
 	}
 	public String getResult(){
 		JSONObject jsonObject = JSONObject.parseObject(result);
+		if("".equals(jsonObject.getString("result"))){
+			return "未识别";
+		}
 		return jsonObject.getString("result");
 	}
 	public long getTime(){
