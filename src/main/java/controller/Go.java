@@ -2,20 +2,18 @@ package controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import yae.YaeDemoClient;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.xml.ws.Response;
 import java.io.*;
-import java.nio.Buffer;
-import java.util.Arrays;
 
 @Controller
 public class Go {
@@ -27,6 +25,7 @@ public class Go {
     private BaiDu baiDu;
 
     private String filename;
+    private WebSocketClientHandshaker handshaker;
 
     @RequestMapping(value = "/file", method = RequestMethod.POST)
     public void fileUpload2(@RequestParam(value = "file") MultipartFile file,
@@ -36,10 +35,18 @@ public class Go {
         if(engine == null){
             engine = "A,X,Y,B";
         }
-        if(engine.equals("all")){
+        if("all".equals(engine)){
             engine = "A,X,Y,B";
         }
         System.out.println(engine);
+        if(engine.contains("Y")||engine.contains("y")){
+            System.out.println("yuzhi");
+            InputStream fis = file .getInputStream();
+            YaeDemoClient yaeDemoClient = new YaeDemoClient(handshaker);
+            yaeDemoClient.Yea(fis);
+            fis.close();
+            System.out.println("```````````````````````````````````````````````````````");
+        }
         if(engine.contains("A")||engine.contains("a")){
             System.out.println("ali");
             InputStream fisALi = file.getInputStream();
@@ -71,13 +78,6 @@ public class Go {
             fisXunFei.close();
             System.out.println("```````````````````````````````````````````````````````");
         }
-//        if(engine.contains("Y")||engine.contains("y")){
-//            System.out.println("yuzhi");
-//            File file1 = new File("C:\\Users\\59785\\Desktop\\Decode.txt");
-//            BufferedReader bufferedReader = new BufferedReader(new FileReader(file1));
-//            yaeresult = bufferedReader.readLine();
-//            bufferedReader.close();
-//        }
     }
 
     @RequestMapping(value = "/file", method = RequestMethod.GET)
@@ -92,7 +92,7 @@ public class Go {
 
         JSONArray array = new JSONArray();
 
-        if(engine.equals("all")){
+        if("all".equals(engine)){
             engine = "A,B,X,Y";
         }
         if(engine.contains("A")||engine.contains("a")) {
@@ -111,13 +111,16 @@ public class Go {
             array.add(json_engine_two);
 
         }
-//        if(engine.contains("Y")||engine.contains("y")) {
-//            json_engine_three.put("engine","yuzhi");
-//            json_engine_three.put("time",yuzhi.getTime());
-//            json_engine_three.put("sentence",yaeresult);
-//            System.out.println(yaeresult+"                  yuzhi");
-//            array.add(json_engine_three);
-//        }
+        if(engine.contains("Y")||engine.contains("y")) {
+            json_engine_three.put("engine","yuzhi");
+            json_engine_three.put("time",0);
+            FileReader fr = new FileReader("result.txt");
+            BufferedReader bufferedReader = new BufferedReader(fr);
+            String result = bufferedReader.readLine();
+            json_engine_three.put("sentence",result);
+            System.out.println(result+"                  yuzhi");
+            array.add(json_engine_three);
+        }
         if(engine.contains("B")||engine.contains("b")) {
             json_engine_four.put("engine","baidu");
             json_engine_four.put("time",baiDu.getTime());
